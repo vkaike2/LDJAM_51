@@ -1,0 +1,77 @@
+LdJam:
+    - the game idea @done
+    - Code
+        - create player movements @done
+            - jump @done
+            - dash w/ cooldown @done
+            - get down @done
+        - create cooldown on top @done
+        - create roof mob that trows bullets @done
+        - projectiles killing the player @done
+        - camera moving between stages @done
+        - Move on Ground to other game Object @done
+        - Jump force by pressing the button @done
+        - door @done
+        - Stage controller @done
+        - Game Controller '? @done
+        - Theorycraft an enemy that stays in the wall @done
+        - Scenarios with moving parts ?
+        - Start in a specific scenario @done
+        - Fix bug with Straigth enemy @done
+        - Die and reborn in same stage @done
+        - Spikes or something that you have to jump
+        - Bouncing Enemy
+    - Art
+        - Player @done
+            - Idle @done
+            - Move @done
+            - Jump @done
+            - down @done
+            - Dash @done
+            - Graphical Indication to show Dash
+            - Button to Press UI
+        - Door @done
+            - Closed @done
+            - Open @done
+            - dieing @done
+        - TileSet
+            - 1 Stage @done
+            - 2 Stage
+        - Roof Robot @done
+            - Idle @done
+            - First Pattern @done
+            - Second Pattern @done
+        - Enemy bouncying
+            - Idle
+            - Atk
+            - Projectile
+    - Game Design
+        - Menu Controlling the character
+        - Quick Tutorial
+        - 1 Stage 3.39 @done
+            - 1 roof robot @done
+        - 2 Stage 17.61, 4.47 ; 242.82 ; 136.84 @done
+            - 2 roof robot @done
+        - 3 Stage 39.81 ; 5.47 @done
+            - 1 enemy that shoots streigth @done
+            - X    = 0 @done
+            - Y    = 39.81 @done
+            - ZOOM = 5.47 @done
+        - 4 Stage @done
+            - 3 enem y that shoots Streigt in diferent cooldowns (you need to get down) @done
+            - X    = 64.75 @done
+            - Y    = 0 @done
+            - ZOOM = 5.4 @done
+        - 5 Stage @done
+            - 1 enemy that shoots Straigt @done
+            - 1 roof robot @done
+            - X    = 88.61 @done
+            - Y    = 1.01 @done
+            - ZOOM = 5.49 @done
+        - 6 Stage
+            - 1 enemy bouncing bullets
+        - 7 Stage
+            - 2 bouncing bullets
+        - 8 Stage
+            - 1 of each enemy
+
