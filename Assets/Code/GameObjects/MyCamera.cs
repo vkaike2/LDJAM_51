@@ -8,12 +8,15 @@ public class MyCamera : MonoBehaviour
     private Animator _animator;
 
     private const string STAGE = "Stage";
-  
+
 
     private List<StageManager> _stagesManager = new List<StageManager>();
 
     private Transform _playerTransform;
     private Vector2 _offset;
+
+    private const string ANIMATION_STAGE_MOVING = "Stage{0} Moving";
+    private const string ANIMATION_STAGE_IDLE = "Stage{0} Idle";
 
     private void Awake()
     {
@@ -22,21 +25,21 @@ public class MyCamera : MonoBehaviour
 
     private void Start()
     {
-        //Cursor.visible = false;
+        _stagesManager = GameObject.FindObjectsOfType<StageManager>().ToList();
         if (Configuration.DidYouDied)
         {
-            ForceStage(Configuration.StartOnStage);
+            RessurectAt(Configuration.StartOnStage);
         }
-        _stagesManager = GameObject.FindObjectsOfType<StageManager>().ToList();
     }
 
     private void Update()
     {
-        if (!Configuration.DidYouDied)
+        if (!Configuration.DidYouDied && !Configuration.GameHasStarted)
         {
-            if (Input.GetKeyDown(KeyCode.Return))
+            if (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Space))
             {
                 ForceStage(0);
+                Configuration.GameHasStarted = true;
             }
         }
     }
@@ -57,6 +60,7 @@ public class MyCamera : MonoBehaviour
     {
         _playerTransform = null;
         _animator.enabled = true;
+        _animator.Play("Stage1 Moving");
     }
 
     private void ManageAttachmentToPlayer()
@@ -68,7 +72,13 @@ public class MyCamera : MonoBehaviour
         this.transform.localPosition = new Vector3(_playerTransform.transform.position.x - _offset.x, _playerTransform.transform.position.y - _offset.y, this.transform.position.z);
     }
 
- 
+
+    public void RessurectAt(int stageNumber)
+    {
+        _animator.Play(string.Format(ANIMATION_STAGE_IDLE, stageNumber));
+        StageManager currentStage = _stagesManager.Where(e => e.StageNumber == stageNumber).FirstOrDefault();
+        currentStage.SpawnnDoorIfYouDied();
+    }
 
     public void ForceStage(int stageNumber)
     {
@@ -83,7 +93,6 @@ public class MyCamera : MonoBehaviour
     public void StartStage(int stage)
     {
         StageManager currentStage = _stagesManager.Where(e => e.StageNumber == stage).FirstOrDefault();
-
         currentStage.SpawnDoor();
     }
 

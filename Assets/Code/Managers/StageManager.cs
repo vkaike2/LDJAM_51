@@ -45,6 +45,13 @@ public class StageManager : MonoBehaviour
         _myCamera = Camera.main.gameObject.GetComponent<MyCamera>();
     }
 
+    public void SpawnnDoorIfYouDied()
+    {
+        _audioManager.PlayAudio("stage_music");
+
+        StartCoroutine(SpawnDoorWithNoAnimator());
+    }
+
     public void SpawnDoor()
     {
         if (StageNumber == 0)
@@ -98,5 +105,21 @@ public class StageManager : MonoBehaviour
     {
         _audioManager.PlayLoopAudio("win_theme");
         _animator.SetTrigger(WIN);
+    }
+
+
+    IEnumerator SpawnDoorWithNoAnimator()
+    {
+        _initialDoor.GetComponent<Animator>().enabled = false;
+        SpriteRenderer spriteRenderer = _initialDoor.GetComponent<SpriteRenderer>();
+        Color tempColor = spriteRenderer.color;
+        tempColor.a = 1;
+        spriteRenderer.color = tempColor;
+        _initialDoor.InstantiatePlayer();
+
+        yield return new WaitForSeconds(1f);
+        
+        Destroy(_initialDoor.gameObject);
+        StartStage();
     }
 }

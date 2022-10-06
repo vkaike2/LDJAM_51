@@ -40,6 +40,11 @@ public class Door : MonoBehaviour
 
     public void StartSpawnPlayerProcess()
     {
+        if(_animator == null)
+        {
+            return;
+        }
+
         _animator.SetTrigger(SPAWN_PLAYER);
     }
 

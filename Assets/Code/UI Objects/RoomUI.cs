@@ -24,7 +24,7 @@ public class RoomUI : MonoBehaviour
     // Animator variables
     private const string PULSE = "Pulse";
 
-    private void Start()
+    private void Awake()
     {
         _textCountDownAnimator = _textCountDown.gameObject.GetComponent<Animator>();
     }

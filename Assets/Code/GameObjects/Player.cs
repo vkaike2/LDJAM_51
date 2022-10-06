@@ -189,6 +189,7 @@ public class Player : MonoBehaviour
 
             }
 
+            Configuration.DidYouDied = false;
             _doorToNextStage.GoToNextStage();
             _doorToNextStage = null;
             _animator.SetTrigger(DIE);

@@ -259,7 +259,7 @@ MonoBehaviour:
   _audios:
   - {fileID: 8300000, guid: 4856c2d0e061b224aa9d6c520347978f, type: 3}
   - {fileID: 8300000, guid: 1008134ae6d00744bae99999bd332fea, type: 3}
-  _audioLoopSource: {fileID: 0}
+  _audioLoopSource: {fileID: 5827760451289004724}
 --- !u!82 &8608679072112850505
 AudioSource:
   m_ObjectHideFlags: 0

@@ -12,7 +12,7 @@ public class SoundSettingsUI : MonoBehaviour
     private const string MUTED = "Muted";
     private const string MOUSE_OVER = "MouseOver";
 
-    List<AudioManager> _audioManagers;
+    List<AudioManager> _audioManagers = new List<AudioManager>();
 
     private void Awake()
     {
@@ -21,30 +21,35 @@ public class SoundSettingsUI : MonoBehaviour
 
     private void Start()
     {
-        UILayer = LayerMask.NameToLayer("UI");   
+        UILayer = LayerMask.NameToLayer("UI");
+    }
+
+    public void AddAudioManager(AudioManager manager)
+    {
+        _audioManagers.Add(manager);
     }
 
     public void MuteUnmute()
     {
         Configuration.IsMuted = !Configuration.IsMuted;
         _animator.SetBool(MUTED, Configuration.IsMuted);
-        _audioManagers = GameObject.FindObjectsOfType<AudioManager>().ToList();
 
         if (Configuration.IsMuted)
         {
             foreach (var audioManager in _audioManagers)
             {
-                audioManager.Mute();
+                if (audioManager != null)
+                    audioManager.Mute();
             }
         }
         else
         {
             foreach (var audioManager in _audioManagers)
             {
-                audioManager.Unmute();
+                if (audioManager != null)
+                    audioManager.Unmute();
             }
         }
-        //_audioListener.enabled = !Configuration.IsMuted;
     }
 
     private void FixedUpdate()
@@ -59,14 +64,12 @@ public class SoundSettingsUI : MonoBehaviour
         }
     }
 
-    //Returns 'true' if we touched or hovering on Unity UI element.
     public bool IsPointerOverUIElement()
     {
         return IsPointerOverUIElement(GetEventSystemRaycastResults());
     }
 
 
-    //Returns 'true' if we touched or hovering on Unity UI element.
     private bool IsPointerOverUIElement(List<RaycastResult> eventSystemRaysastResults)
     {
         for (int index = 0; index < eventSystemRaysastResults.Count; index++)
@@ -79,7 +82,6 @@ public class SoundSettingsUI : MonoBehaviour
     }
 
 
-    //Gets all event system raycast results of current mouse or touch position.
     static List<RaycastResult> GetEventSystemRaycastResults()
     {
         PointerEventData eventData = new PointerEventData(EventSystem.current);

@@ -4179,7 +4179,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &287983444
 GameObject:
@@ -17423,7 +17423,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &308314671
 GameObject:
@@ -17610,7 +17610,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &382393989
 PrefabInstance:
@@ -18294,7 +18294,7 @@ Transform:
   m_Children:
   - {fileID: 1835966477}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &519420033
 Animator:
@@ -19974,7 +19974,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &850088483
 PrefabInstance:
@@ -20587,7 +20587,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8214041215563312984, guid: 6e1834ef7c2dcc44ba9b7e5f59aa9562, type: 3}
       propertyPath: _cdwPerShoot
-      value: 1
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 8214041215563312984, guid: 6e1834ef7c2dcc44ba9b7e5f59aa9562, type: 3}
       propertyPath: _cdwWaitBeforeShoot
@@ -20926,7 +20926,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8214041215563312984, guid: 6e1834ef7c2dcc44ba9b7e5f59aa9562, type: 3}
       propertyPath: _cdwPerShoot
-      value: 1
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 8214041215563312984, guid: 6e1834ef7c2dcc44ba9b7e5f59aa9562, type: 3}
       propertyPath: _cdwWaitBeforeShoot
@@ -21457,7 +21457,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.33, y: -1.54}
+  m_AnchoredPosition: {x: 0.83, y: -1.52}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &1178481671
@@ -23702,7 +23702,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8214041215563312984, guid: 6e1834ef7c2dcc44ba9b7e5f59aa9562, type: 3}
       propertyPath: _cdwWaitBeforeShoot
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8214041215563312984, guid: 6e1834ef7c2dcc44ba9b7e5f59aa9562, type: 3}
       propertyPath: _shouldStartShooting
@@ -28563,7 +28563,7 @@ RectTransform:
   m_GameObject: {fileID: 1788135229}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.0048279385, y: 0.0048279385, z: 0.0048279385}
+  m_LocalScale: {x: 0.06576526, y: 0.06576526, z: 0.06576526}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1178481670}
@@ -28571,8 +28571,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.00000071526, y: 1.8}
-  m_SizeDelta: {x: 3900, y: 700}
+  m_AnchoredPosition: {x: -0.41, y: 1.8}
+  m_SizeDelta: {x: 224, y: 78}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1788135231
 MonoBehaviour:
@@ -28594,7 +28594,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 04dcc67bec714a24abcb67867a256cb7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b51df4493d65fec4e860360bb93677f2, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -40597,7 +40597,7 @@ Transform:
   - {fileID: 1926292281}
   - {fileID: 1539008568}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2062137631
 PrefabInstance:
@@ -40844,7 +40844,7 @@ RectTransform:
   m_Children:
   - {fileID: 104184971}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
